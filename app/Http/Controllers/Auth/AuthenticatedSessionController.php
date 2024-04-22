@@ -30,11 +30,22 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): RedirectResponse
     {
-        $request->authenticate();
+        $credentionlas = $request->only('email','password') ;
+        if (Auth::guard('admins')->attempt($credentionlas)) {
+            $request->session()->regenerate();
+            # code...
+            return to_route('dashboard');
+        }elseif (Auth::guard('charties')->attempt($credentionlas)) {
+            $request->session()->regenerate();
+            # code...
+            return to_route('dashboard');
+        }
+        return back()->withErrors(
+            [
+                'email' => 'The provided credentials do not match our records.',
+            ]
+        ) ;
 
-        $request->session()->regenerate();
-
-        return redirect()->intended(RouteServiceProvider::HOME);
     }
 
     /**
