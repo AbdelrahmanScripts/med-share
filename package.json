@@ -18,6 +18,10 @@
         "vue": "^3.4.0"
     },
     "dependencies": {
-        "flowbite": "^2.3.0"
+        "@fortawesome/fontawesome-svg-core": "^6.5.2",
+        "@fortawesome/vue-fontawesome": "^3.0.6",
+        "@vueuse/core": "^10.9.0",
+        "flowbite": "^2.3.0",
+        "tw-elements": "^2.0.0"
     }
 }
