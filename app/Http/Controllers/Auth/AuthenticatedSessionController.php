@@ -19,10 +19,14 @@ class AuthenticatedSessionController extends Controller
      */
     public function create(): Response
     {
-        return Inertia::render('Auth/Login', [
-            'canResetPassword' => Route::has('password.request'),
-            'status' => session('status'),
-        ]);
+        return Inertia::render(
+            'Auth/Login',
+            [
+
+                'canResetPassword' => Route::has('password.request'),
+                'status' => session('status'),
+            ]
+        );
     }
 
     /**
@@ -30,22 +34,21 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): RedirectResponse
     {
-        $credentionlas = $request->only('email','password') ;
-        if (Auth::guard('admins')->attempt($credentionlas)) {
+        $credentionlas = $request->only('email', 'password');
+        if (Auth::guard('web')->attempt($credentionlas)) {
             $request->session()->regenerate();
             # code...
-            return to_route('dashboard');
-        }elseif (Auth::guard('charties')->attempt($credentionlas)) {
+            return to_route('test');
+        } elseif (Auth::guard('charits')->attempt($credentionlas)) {
             $request->session()->regenerate();
             # code...
-            return to_route('dashboard');
+            return to_route('test.chartiy');
         }
         return back()->withErrors(
             [
                 'email' => 'The provided credentials do not match our records.',
             ]
-        ) ;
-
+        );
     }
 
     /**

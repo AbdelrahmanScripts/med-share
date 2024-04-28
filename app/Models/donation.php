@@ -33,5 +33,4 @@ class donation extends Model
         return $this->belongsTo(User::class);
     }
 
-
 }

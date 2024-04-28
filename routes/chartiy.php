@@ -16,49 +16,51 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
+// Route::get('/', function () {
+//     return Inertia::render('Welcome', [
+//         'canLogin' => Route::has('login'),
+//         'canRegister' => Route::has('register'),
+//         'laravelVersion' => Application::VERSION,
+//         'phpVersion' => PHP_VERSION,
+//     ]);
+// });
 
 
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
-
-
-
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::middleware('auth')->group(function () {
+//     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+//     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+//     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+// });
 
 
 
-Route::get('/home', function () {
-    return Inertia::render('admins/home');
-})->name('home');
-
-Route::get('/ListgovDonations', function () {
-    return Inertia::render('admins/Donations/index');
-})->name('ListgovDonations');
-
-Route::get('/govDonations', function () {
-    return Inertia::render('admins/Donations/governments');
-})->name('govDonations');
+// Route::group(['middleware' => 'auth:charties'] ,function () {
+//     Route::get('/dashboard', function () {
+//         return Inertia::render('Dashboard');
+//     })->middleware(['auth', 'verified'])->name('dashboard');
 
 
 
-Route::group(['middleware' => 'auth:charties'] ,function () {
-    
-});
+//     Route::get('/home', function () {
+//         return Inertia::render('admins/home');
+//     })->name('home');
 
 
+//     Route::get('/ListgovDonations', function () {
+//         return Inertia::render('admins/Donations/index');
+//     })->name('ListgovDonations');
 
+
+//     Route::get('/govDonations', function () {
+//         return Inertia::render('admins/Donations/governments');
+//     })->name('govDonations');
+
+// });
+
+
+// test login
+// Route::get('/test/chartiy', function () {
+//     return view('test-chartiy');
+// })->name('test.chartiy');
 
 require __DIR__.'/auth.php';

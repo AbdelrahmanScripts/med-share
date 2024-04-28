@@ -14,17 +14,17 @@ return new class extends Migration
         Schema::create('charits', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('image');
             $table->string('email')->unique();
-            $table->string('phone')->unique();
             $table->string('password');
-            $table->text('description');
-            $table->string('website_link')->unique();
-            $table->boolean('isAtive')->default(0);
-            $table->bigInteger('admin_id')->unsigned()->nullable();
-            $table->foreign('admin_id')->references('id')->on('admins');
-            $table->bigInteger('specialty_id')->unsigned()->nullable();
-            $table->foreign('specialty_id')->references('id')->on('Specialties');
+            $table->string('image')->nullable();
+            // $table->string('phone')->nullable()->unique();
+            // $table->text('description')->nullable();
+            // $table->string('website_link')->nullbale()->unique();
+            // $table->boolean('isAtive')->default(0);
+            // $table->bigInteger('admin_id')->unsigned()->nullable();
+            // $table->foreign('admin_id')->references('id')->on('admins');
+            // $table->timestamp('email_verified_at')->nullable();
+            $table->rememberToken();
             $table->timestamps();
         });
     }
