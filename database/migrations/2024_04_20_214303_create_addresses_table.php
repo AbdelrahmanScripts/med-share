@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('building_number');
             $table->string('floor');
             $table->string('flat_number');
+            $table->bigInteger('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

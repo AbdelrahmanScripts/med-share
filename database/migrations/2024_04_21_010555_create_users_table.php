@@ -15,15 +15,15 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            // $table->string('phone')->nullable();
-            // $table->string('image')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('image')->nullable();
             $table->string('password');
-            // $table->string('national_id')->nullable();
+            $table->string('national_id')->nullable();
             $table->bigInteger('address_id')->unsigned()->nullable();
             $table->foreign('address_id')->references('id')->on('addresses');
-            // $table->timestamp('email_verified_at')->nullable();
-            // $table->string('device_token')->nullable();
+            $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
+            $table->string('device_token')->nullable();
             $table->timestamps();
         });
     }

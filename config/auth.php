@@ -36,17 +36,9 @@ return [
     */
 
     'guards' => [
-        'users' => [
-            'driver' => 'sanctum',
-            'provider' => 'users',
-        ],
         'web' => [
             'driver' => 'session',
-            'provider' => 'admins',
-        ],
-        'charits' => [
-            'driver' => 'session',
-            'provider' => 'charits',
+            'provider' => 'users',
         ],
     ],
 
@@ -71,14 +63,6 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
-        ],
-        'admins' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\admin::class,
-        ],
-        'charits' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\charit::class,
         ],
 
         // 'users' => [
@@ -110,18 +94,6 @@ return [
         'users' => [
             'provider' => 'users',
             'table' => 'password_reset_tokens',
-            'expire' => 60,
-            'throttle' => 60,
-        ],
-        'admins' => [
-            'provider' => 'admins',
-            'table' => 'admin_password_reset_tokens',
-            'expire' => 60,
-            'throttle' => 60,
-        ],
-        'charits' => [
-            'provider' => 'charits',
-            'table' => 'charity_password_reset_tokens',
             'expire' => 60,
             'throttle' => 60,
         ],
