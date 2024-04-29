@@ -55,9 +55,9 @@ Route::get('/govDonations', function () {
 
 
 // test login
-// Route::get('/test', function () {
-//     return view('test');
-// })->name('test');
+Route::get('/test', function () {
+    return view('test');
+})->name('test');
 
 
 

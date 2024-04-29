@@ -59,8 +59,8 @@ use Inertia\Inertia;
 
 
 // test login
-// Route::get('/test/chartiy', function () {
-//     return view('test-chartiy');
-// })->name('test.chartiy');
+Route::get('/test/chartiy', function () {
+    return view('test-chartiy');
+})->name('test.chartiy');
 
 require __DIR__.'/auth.php';
