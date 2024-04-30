@@ -23,13 +23,14 @@ class charit extends Authenticatable #implements MustVerifyEmail
         'name',
         'email',
         'password',
-        // 'phone',
-        // 'image',
-        // 'admin_id',
-        // 'description',
-        // 'specialty_id',
-        // 'website_link',
-        // 'isAtive',
+        'phone',
+        'image',
+        'admin_id',
+        'description',
+        'specialty_id',
+        'website_link',
+        'isAtive',
+        
     ];
 
     /**

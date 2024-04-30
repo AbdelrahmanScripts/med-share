@@ -12,7 +12,6 @@ class CharitController extends Controller
     public function index()
     {
         //
-        
     }
 
     /**

@@ -46,7 +46,21 @@ return [
     |
     */
 
-    'expiration' => null,
+    'expiration' => 30 * 24 * 60,  // only 30 days   
+
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Maximum Number of Tokens
+    |--------------------------------------------------------------------------
+    |
+    | This value defines the maximum number of personal access tokens that may
+    | be associated with a single user. In addition, through the interface
+    | users may revoke any of their existing tokens manually.
+    |
+    */
+    'max_tokens' => 3,
 
     /*
     |--------------------------------------------------------------------------

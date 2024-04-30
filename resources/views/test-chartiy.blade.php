@@ -24,7 +24,7 @@
         </header>
         <main>
 
-            <h1>chratiy</h1>
+            <h1>hi chratiy</h1>
         </main>
         <footer>
             <!-- place footer here -->
