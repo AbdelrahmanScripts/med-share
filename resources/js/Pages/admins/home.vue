@@ -1,6 +1,6 @@
 <template>
     <AdminsLayout>
-        hi
+
     </AdminsLayout>
 </template>
 

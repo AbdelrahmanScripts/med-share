@@ -1,5 +1,6 @@
 
 <script>
+
 import en from "./en.js";
 import ar from "./ar.js";
 export default {
@@ -16,56 +17,7 @@ export default {
         },
     },
 };
-// set the target element that will be collapsed or expanded (eg. navbar menu)
-// const $targetEl = document.getElementById("targetEl");
 
-// // optionally set a trigger element (eg. a button, hamburger icon)
-// const $triggerEl = document.getElementById("triggerEl");
-
-// // optional options with default values and callback functions
-// const options = {
-//     onCollapse: () => {
-//         console.log("element has been collapsed");
-//     },
-//     onExpand: () => {
-//         console.log("element has been expanded");
-//     },
-//     onToggle: () => {
-//         console.log("element has been toggled");
-//     },
-// };
-
-// const instanceOptions = {
-//     id: "targetEl",
-//     override: true,
-// };
-
-// import { Collapse } from "flowbite";
-
-// /*
-//  * $targetEl: required
-//  * $triggerEl: optional
-//  * options: optional
-//  */
-// const collapse = new Collapse($targetEl, $triggerEl, options, instanceOptions);
-
-// defineProps({
-
-//     canLogin: {
-//         type: Boolean,
-//     },
-//     canRegister: {
-//         type: Boolean,
-//     },
-//     laravelVersion: {
-//         type: String,
-//         required: true,
-//     },
-//     phpVersion: {
-//         type: String,
-//         required: true,
-//     },
-// });
 </script>
 <template>
     <Head title="Welcome" />
@@ -88,6 +40,10 @@ export default {
 
     <!-- hero - start -->
     <div class="bg-white pb-6 sm:pb-8 lg:pb-12">
+        <!-- src/app.html -->
+<body class="bg-white dark:bg-gray-800">
+  <div>%svelte.body%</div>
+</body>
      <header class="bg-slate-100">
     <div class="flex items-center justify-between px-9  py-3">
        <a
@@ -133,6 +89,7 @@ export default {
     <button><a href="/register" class="mt-1 mx-1 block px-2 py-1 text-black font-semibold rounded hover:bg-gray-200">Register</a></button>
 
         <hr>
+
     </div>
 
   </header>
