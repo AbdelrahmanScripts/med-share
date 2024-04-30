@@ -41,9 +41,6 @@ export default {
     <!-- hero - start -->
     <div class="bg-white pb-6 sm:pb-8 lg:pb-12">
         <!-- src/app.html -->
-<body class="bg-white dark:bg-gray-800">
-  <div>%svelte.body%</div>
-</body>
      <header class="bg-slate-100">
     <div class="flex items-center justify-between px-9  py-3">
        <a
