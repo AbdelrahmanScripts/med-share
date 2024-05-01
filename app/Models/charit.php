@@ -30,7 +30,6 @@ class charit extends Authenticatable #implements MustVerifyEmail
         'specialty_id',
         'website_link',
         'isAtive',
-        
     ];
 
     /**

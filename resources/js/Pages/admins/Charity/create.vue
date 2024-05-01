@@ -1,10 +1,11 @@
 <template>
-    <div>
+    
 
-    </div>
 </template>
 
 <script setup>
+import AdminsLayout from "@/Layouts/AdminsLayout.vue";
+defineOptions({ layout: AdminsLayout });
 
 </script>
 

@@ -14,8 +14,7 @@ return new class extends Migration
         Schema::create('donation_images', function (Blueprint $table) {
             $table->id();
             $table->string('path');
-            $table->bigInteger('donation_id')->unsigned();
-            $table->foreign('donation_id')->references('id')->on('donations');
+            $table->foreignId('donation_id')->constrained('donations')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

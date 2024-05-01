@@ -18,8 +18,7 @@ return new class extends Migration
             $table->string('phone')->nullable()->unique();
             $table->string('image')->nullable();
             $table->string('password');
-            $table->bigInteger('address_id')->unsigned()->nullable();
-            $table->foreign('address_id')->references('id')->on('addresses');
+            $table->foreignId('address_id')->constrained('addresses')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('device_token')->nullable();
             $table->rememberToken();

@@ -10,10 +10,14 @@ class specialty extends Model
 {
     use HasFactory;
 
+    protected $table = "specialties";
+
     protected $fillable = [
         'titel',
         'image',
         'description',
+        
+
     ];
 
     public function charties() : HasMany

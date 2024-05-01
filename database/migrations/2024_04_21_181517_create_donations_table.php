@@ -14,10 +14,8 @@ return new class extends Migration
         Schema::create('donations', function (Blueprint $table) {
             $table->id();
             $table->text('description');
-            $table->bigInteger('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->bigInteger('charity_id')->unsigned();
-            $table->foreign('charity_id')->references('id')->on('charits');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId('charit_id')->nullable()->constrained('charits')->onDelete('cascade')->onUpdate('cascade');
             $table->enum('state', ['pending', 'approved', 'rejected'])->default('pending');
             $table->timestamps();
         });
