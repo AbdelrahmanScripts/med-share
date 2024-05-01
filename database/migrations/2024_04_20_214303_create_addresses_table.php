@@ -13,11 +13,9 @@ return new class extends Migration
     {
         Schema::create('addresses', function (Blueprint $table) {
             $table->id();
-            $table->string('city');
-            $table->string('area');
-            $table->string('building_number');
-            $table->string('floor');
-            $table->string('flat_number');
+            $table->string('address');
+            $table->string('horizontalCoordinate');
+            $table->string('verticalCoordinate');
             $table->timestamps();
         });
     }

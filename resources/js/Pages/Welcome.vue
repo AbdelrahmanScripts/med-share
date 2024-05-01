@@ -40,6 +40,10 @@ export default {
 
     <!-- hero - start -->
     <div class="bg-white pb-6 sm:pb-8 lg:pb-12">
+<<<<<<< HEAD
+=======
+        <!-- src/app.html -->
+>>>>>>> 759f52127630518772500e491d6c7de8feffeb16
      <header class="bg-slate-100">
     <div class="flex items-center justify-between px-9  py-3">
        <a
