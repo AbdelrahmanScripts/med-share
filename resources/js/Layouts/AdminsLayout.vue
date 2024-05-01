@@ -111,7 +111,7 @@
    </div>
 </aside>
 
-<div class="p-4 sm:ml-64 mt-14">
+<div class="p-4 sm:ml-64 mt-14 bg-slate-50">
         <slot/>
 </div>
 

@@ -1,11 +1,12 @@
 <template>
-    <section class="text-gray-200 bg-gray-800 body-font">
+    <AdminsLayout>
+    <section class="text-gray-200    body-font">
         <div class="container px-5 py-24 mx-auto flex flex-col">
             <div class="lg:w-4/6 mx-auto">
                 <div id="gallery" class="relative w-full" data-carousel="slide">
                     <!-- Carousel wrapper -->
                     <div
-                        class="relative h-44 overflow-hidden rounded-lg md:h-96 bg-gray-200"
+                        class="relative h-44 overflow-hidden rounded-lg md:h-96"
                     >
                         <!-- Item 1 -->
                         <div
@@ -118,7 +119,7 @@
                     </button>
                 </div>
                 <div
-                    class="flex flex-col justify-center sm:flex-row mt-10 bg-gray-200 rounded-xl"
+                    class="flex flex-col justify-center sm:flex-row mt-10  rounded-xl"
                 >
                     <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
                         <div
@@ -244,11 +245,14 @@
             </div>
         </div>
     </section>
+    </AdminsLayout>
 </template>
 
 <script setup>
 import { onMounted } from "vue";
 import { initFlowbite } from "flowbite";
+import AdminsLayout from "@/Layouts/AdminsLayout.vue";
+
 
 // initialize components based on data attribute selectors
 onMounted(() => {

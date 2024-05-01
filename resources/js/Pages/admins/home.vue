@@ -1,6 +1,6 @@
 <template>
     <AdminsLayout>
-
+        Welcome Admins 
     </AdminsLayout>
 </template>
 
