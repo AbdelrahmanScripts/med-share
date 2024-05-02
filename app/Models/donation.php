@@ -11,6 +11,8 @@ class donation extends Model
 {
     use HasFactory;
 
+    protected $table = "donations";
+
     protected $fillable = [
         'description',
         'status',
@@ -22,7 +24,7 @@ class donation extends Model
     {
         return $this->belongsTo(charit::class);
     }
-    
+
     public function images() : HasMany
     {
         return $this->hasMany(donation_image::class);

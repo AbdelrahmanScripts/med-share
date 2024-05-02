@@ -19,6 +19,8 @@ class charit extends Authenticatable #implements MustVerifyEmail
      *
      * @var array<int, string>
      */
+    protected $table = "charits";
+
     protected $fillable = [
         'name',
         'email',

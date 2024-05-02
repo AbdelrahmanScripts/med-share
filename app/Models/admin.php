@@ -30,6 +30,9 @@ class admin extends Authenticatable #implements MustVerifyEmail
      *
      * @var array<int, string>
      */
+
+     protected $table = "admins";
+
     protected $hidden = [
         'password',
         'remember_token',
