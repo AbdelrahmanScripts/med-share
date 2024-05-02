@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\CharitController;
+use App\Http\Controllers\DonationController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SpecialtyController;
+use App\Http\Controllers\UserController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -30,6 +32,8 @@ Route::get('/', function () {
 
 Route::middleware('auth')->group(function () {
     Route::resource('charities',CharitController::class);
+    Route::resource('donations',DonationController::class)->only(['index','show','destroy']);
+    Route::resource('users',UserController::class)->only(['index','show','destroy']);
     Route::resource('specialties',SpecialtyController::class);
 });
 
