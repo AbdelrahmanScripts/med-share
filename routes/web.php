@@ -40,57 +40,94 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 
-
-
-
 Route::get('/home', function () {
     return Inertia::render('admins/home');
 })->name('home');
 
-Route::get('/ListgovDonations', function () {
-    return Inertia::render('admins/Donations/index');
-})->name('ListgovDonations');
 
-Route::get('/govDonations', function () {
-    return Inertia::render('admins/Donations/governments');
-})->name('govDonations');
 
 Route::get('/dashboardView', function () {
     return Inertia::render('admins/Dashboard/dashboardView');
 })->name('dashboardView');
 
-Route::get('/charityTable', function () {
-    return Inertia::render('admins/Charity/charityTable');
-})->name('charityTable');
+Route::get('/govDonations', function () {
+    return Inertia::render('admins/Donations/governments');
+})->name('govDonations');
+
+Route::get('/ListgovDonations', function () {
+    return Inertia::render('admins/Donations/index');
+})->name('ListgovDonations');
+
+Route::get('/charities', function () {
+    return Inertia::render('admins/Charity/index');
+})->name('charities');
+
+Route::get('/specialties', function () {
+    return Inertia::render('admins/specialties/majors');
+})->name('specialties');
+Route::get('/ListspecCharities', function () {
+    return Inertia::render('admins/specialties/index');
+})->name('ListspecCharities');
 
 Route::get('/users', function () {
-    return Inertia::render('admins/Users/userTable');
+    return Inertia::render('admins/Users/index');
 })->name('users');
 
 Route::get('/systemUsers', function () {
-    return Inertia::render('admins/SystemUsers/systemUserTable');
+    return Inertia::render('admins/SystemUsers/index');
 })->name('systemUsers');
 
-Route::get('/systemUsers', function () {
-    return Inertia::render('admins/SystemUsers/systemUserTable');
-})->name('systemUsers');
+// -----Index END---//
+
+
+// Route::get('/dashboardView/show', function () {
+//     return Inertia::render('admins/Dashboard/edit');
+// })->name('showDashboardView');
 
 Route::get('/ListgovDonations/show', function () {
-    return Inertia::render('admins/Donations/show');
+    return Inertia::render('admins/Donations/edit');
 })->name('showDonation');
 
 Route::get('charityTable/show', function () {
-    return Inertia::render('admins/Charity/show');
+    return Inertia::render('admins/Charity/edit');
 })->name('showCharity');
 
+Route::get('/specialties/show', function () {
+    return Inertia::render('admins/specialties/edit');
+})->name('showSpecialties');
+
 Route::get('UsersTable/show', function () {
-    return Inertia::render('admins/Users/show');
+    return Inertia::render('admins/Users/edit');
 })->name('showUser');
 
 Route::get('SystemUsersTable/show', function () {
-    return Inertia::render('admins/SystemUsers/show');
+    return Inertia::render('admins/SystemUsers/edit');
 })->name('showSystemUser');
 
+// -----Show END---//
+
+
+Route::get('/ListgovDonations/create', function () {
+    return Inertia::render('admins/Donations/create');
+})->name('createDonation');
+
+Route::get('charityTable/create', function () {
+    return Inertia::render('admins/Charity/create');
+})->name('createCharity');
+
+Route::get('/specialties/create', function () {
+    return Inertia::render('admins/specialties/create');
+})->name('createSpecialtie');
+
+Route::get('UsersTable/create', function () {
+    return Inertia::render('admins/Users/create');
+})->name('createUser');
+
+Route::get('SystemUsersTable/create', function () {
+    return Inertia::render('admins/SystemUsers/create');
+})->name('createSystemUser');
+
+// -----Create END---
 
 
 // test login

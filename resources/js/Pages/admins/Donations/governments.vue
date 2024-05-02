@@ -41,11 +41,8 @@
                                 d="m1 9 4-4-4-4"
                             />
                         </svg>
-                        <Link
-                            href="#"
-                            class="ms-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white"
-                            >Donations</Link
-                        >
+                        <a href="#"
+                            class="ms-1 text-sm font-medium text-slate-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white">Donations</a>
                     </div>
                 </li>
                 <li aria-current="page">
@@ -65,10 +62,8 @@
                                 d="m1 9 4-4-4-4"
                             />
                         </svg>
-                        <span
-                            class="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400"
-                            >All Governments</span
-                        >
+                        <a href="#"
+                            class="ms-1 text-sm font-medium text-slate-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white">All Governments</a>
                     </div>
                 </li>
             </ol>

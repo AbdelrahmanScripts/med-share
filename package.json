@@ -21,6 +21,8 @@
     },
     "dependencies": {
         "chart.js": "^4.4.2",
+        "pagedone": "^1.1.2",
+        "tw-elements": "^2.0.0",
         "vue-chartjs": "^5.3.1"
     }
 }
