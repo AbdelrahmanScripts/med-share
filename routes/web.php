@@ -32,8 +32,8 @@ Route::get('/', function () {
 
 Route::middleware('auth')->group(function () {
     Route::resource('charities',CharitController::class);
-    Route::resource('donations',DonationController::class)->only(['index','show','destroy']);
-    Route::resource('users',UserController::class)->only(['index','show','destroy']);
+    Route::resource('donations',DonationController::class);
+    Route::resource('users',UserController::class);
     Route::resource('specialties',SpecialtyController::class);
 });
 

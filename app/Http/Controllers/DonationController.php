@@ -22,6 +22,13 @@ class DonationController extends Controller
         ]);
     }
 
+    public function edit(donation $donation)
+    {
+        return inertia('admins/Donations/edit',[
+            'donation'=>$donation
+        ]);
+    }
+
     public function destroy(donation $donation)
     {
         $donation->delete();
