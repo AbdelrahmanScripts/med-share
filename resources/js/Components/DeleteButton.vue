@@ -32,7 +32,8 @@
 </div>
 </template>
 <script setup>
-document.addEventListener("DOMContentLoaded", function(event) {
+// DOMContentLoaded
+document.addEventListener("", function(event) {
   document.getElementById('deleteButton').click();
 });
 </script>

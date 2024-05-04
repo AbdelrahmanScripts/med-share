@@ -100,10 +100,10 @@
         <h2
             class="mb-4 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl dark:text-white"
         >
-            Charity Table
+            Speciality Table
         </h2>
         <hr class="h-px my-6 bg-gray-200 border-0 dark:bg-gray-700" />
-        <CharitiesTable/>
+        <speciality-table/>
 
     </AdminsLayout>
 </template>
@@ -111,7 +111,7 @@
 <script setup>
 import { Link } from '@inertiajs/vue3';
 import AdminsLayout from "@/Layouts/AdminsLayout.vue";
-import CharitiesTable from '@/Components/CharitiesTable.vue';
+import SpecialityTable from '@/Components/SpecialityTable.vue';
 
 </script>
 

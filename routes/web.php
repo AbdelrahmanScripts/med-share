@@ -92,9 +92,10 @@ Route::get('charityTable/show', function () {
     return Inertia::render('admins/Charity/edit');
 })->name('showCharity');
 
-Route::get('/specialties/show', function () {
+Route::get('/specialties/majors/show', function () {
     return Inertia::render('admins/specialties/edit');
-})->name('showSpecialties');
+})->name('showSpecialtie');
+
 
 Route::get('UsersTable/show', function () {
     return Inertia::render('admins/Users/edit');

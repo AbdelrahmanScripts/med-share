@@ -50,56 +50,63 @@
             <hr class="h-px my-6 bg-gray-300 border-0 dark:bg-gray-700">
 
 <!-- Main modal -->
-  <div class="container px-5 py-24 mx-auto flex ">
+  <div class="container px-5 py-6 mx-auto flex ">
             <div class="lg:w-4/6 mx-auto">
                 <div
                     class="flex flex-col justify-center sm:flex-row mt-10  rounded-xl"
                 >
                     <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
-                        <div
-                            class="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-400 text-gray-600"
-                        >
-                            <img
-                                class="w-20 h-20 rounded-full"
-                                src=""
-                                alt=""
-                            />
-                        </div>
 
 
-                           <a href="https://www.google.com/maps"  class="flex items-center text-center justify-center mb-10">
-                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 my-2" fill="#075985"  viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
-                            <h2
-                                class="font-medium title-font mx-4 text-cyan-900 text-lg"
-                            >
-                                add Location
-                            </h2>
-                           </a>
+                        <form class="p-4 md:p-5">
+                              <div class="flex flex-col justify-center mb-10">
+                                 <div class="shrink-0 mb-6 justify-center flex">
+                                    <img
+                                        class="h-20 w-20 bg-slate-300 object-cover rounded-full"
+                                        src=""
+                                        alt=""
+                                    />
+                                </div>
 
+                                 <label class=" mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">Upload Photo</label>
+                                <input class=" mb-2 w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input" type="file">
 
-                          <form class="p-4 md:p-5">
+                               </div>
                 <div class="grid gap-4 mb-4 grid-cols-2">
-                    <div class="col-span-2">
-                        <label for="id" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Charity Id</label>
-                        <input type="number" name="id" id="id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type Charity ID" required="">
-                    </div>
+
                     <div class="col-span-2">
                         <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
-                        <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type Charity Name" required="">
+                        <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Charity Name" required="">
+                    </div>
+                    <div class="col-span-2 ">
+                        <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone</label>
+                        <input type="text" name="phone" id="phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Phone" required="">
+                    </div>
+                    <div class="col-span-2 ">
+                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+                        <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Email" required="">
+                    </div>
+                    <div class="col-span-2 ">
+                         <label for="website" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Website URL</label>
+            <input type="url" id="website" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Website.com" required />
                     </div>
                    <div class="col-span-2 ">
                         <label for="category" class="block mb-2 text-sm text-center font-medium text-gray-900 dark:text-white">Major</label>
                         <select id="category" class="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-primary-500 w-full focus:border-primary-500 block  p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                            <option selected="">General </option>
+                            <option selected="">-</option>
+                            <option value="">Major 1</option>
                             <option value="">Major 2</option>
                             <option value="">Major 3</option>
                             <option value="">Major 4</option>
-                            <option value="">Major 34</option>
                         </select>
                     </div>
-                    <div class="col-span-2 ">
-                        <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Address</label>
-                        <input type="text" name="address" id="address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="area" required="">
+                   <div class="col-span-2 ">
+                        <label for="category" class="block mb-2 text-sm text-center font-medium text-gray-900 dark:text-white">Status</label>
+                        <select id="category" class="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-primary-500 w-full focus:border-primary-500 block  p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                            <option selected="">-</option>
+                            <option value="">Active</option>
+                            <option value="">Not Active</option>
+                        </select>
                     </div>
 
                     <div class="col-span-2">
