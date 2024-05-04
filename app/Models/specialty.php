@@ -16,14 +16,12 @@ class specialty extends Model
         'titel',
         'image',
         'description',
-        
-
     ];
 
     public function charties() : HasMany
     {
         return $this->hasMany(charit::class);
     }
-    
+
 }
 
