@@ -6,6 +6,7 @@ use App\Http\Requests\CharityStoreRequest;
 use App\Models\charit;
 use App\Services\ImageService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class CharitController extends Controller
 {
@@ -37,6 +38,7 @@ class CharitController extends Controller
         if ($request->hasFile("image")) {
             $validatedData["image"] = ImageService::uploadImage($request->file("image"), "charities");
         }
+        $validatedData["password"] = Hash::make($request->password);
         $chrity = charit::create($validatedData);
         return to_route("charities.index");
     }

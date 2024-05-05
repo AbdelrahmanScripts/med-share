@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminContrller;
 use App\Http\Controllers\CharitController;
 use App\Http\Controllers\DonationController;
 use App\Http\Controllers\ProfileController;
@@ -34,6 +35,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('charities',CharitController::class);
     Route::resource('donations',DonationController::class);
     Route::resource('users',UserController::class);
+    Route::resource('admins',AdminContrller::class);
     Route::resource('specialties',SpecialtyController::class);
 });
 

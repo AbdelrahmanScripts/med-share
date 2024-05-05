@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class SpecialityStoreRequest extends FormRequest
+class StoreAdminRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,10 +22,9 @@ class SpecialityStoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => 'required|string|max:255',
-            'description' => 'required|string|max:255',
-            'image' => 'required|image|mimes:png,jpg,jpeg,svg|max:4048',
-            'admin_id' => 'required|exists:admins,id',
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:admins',
+            'password' => 'required|string|min:8|confirmed',
         ];
     }
 }
